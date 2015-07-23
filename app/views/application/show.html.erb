@@ -2,18 +2,18 @@
 <div class = "container">
 	<div class = "row">
 		<div class = "col-md-3"style = "margin-top:15px">
-		<img src = "<%=@image%>"alt = "<%=@name%>">
+      <img src = "<%=@user.image%>"alt = "<%=@user.name%>">
 		</div>
 		<div class = "col-md-9">
 			<div class="page-header">
-				<h1><%=@name%><small>Member since <%=@join_date%></small></h1>
+        <h1><%=@user.name%><small>Member since <%=@user.join_date%></small></h1>
 			</div>
-			<p><%=@descrip%></p>
+      <p><%=@user.descrip%></p>
 			<p style = "display:inline"><b>Location: </b></p>
-			<p style = "display:inline"><%=@location%></p>
+      <p style = "display:inline"><%=@user.location%></p>
 			<p><b>Completion: </b></p>
 			<div class="progress">
-				<div class="progress-bar" role="progressbar" aria-valuenow="<%=@completion%>" aria-valuemin="0" aria-valuemax="100" style="width:<%=@completion%>"><%=@completion%>
+        <div class="progress-bar" role="progressbar" aria-valuenow="<%=@user.completion%>" aria-valuemin="0" aria-valuemax="100" style="width:<%=@user.completion%>"><%=@user.completion%>
 		</div>
 	</div>
 </div>
