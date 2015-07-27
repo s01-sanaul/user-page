@@ -20,4 +20,19 @@ end
     u.save
     redirect_to "/user/#{ u.id }"
   end
+  
+  def edit
+    @user = User.find_by_id(params["id"])
+  end 
+  
+  def edit_user
+    u = User.new
+    u.name=params["name"]
+    u.join_date=params["date"]
+    u.descrip=params["descrip"]
+    u.image=params["image"]
+    u.location=params["loc"]
+    u.save
+    redirect_to "/user/#{ u.id }"
+  end
 end
