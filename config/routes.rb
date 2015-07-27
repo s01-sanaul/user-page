@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get "/create_user" => "application#create"
   get "/user/:id/edit" => "application#edit"
   get "/edit_user/:id" => "application#edit_user"
+  get "user/:id/destroy" => "application#destroy"
 end

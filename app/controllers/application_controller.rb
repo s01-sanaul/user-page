@@ -35,4 +35,9 @@ end
     u.save
     redirect_to "/user/#{ u.id }"
   end
+  
+  def destroy
+    u = User.find_by_id(params['id'])
+    u.destroy 
+  end
 end

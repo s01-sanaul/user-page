@@ -12,7 +12,9 @@
       <p style = "display:inline"><%=@user.location%></p>
 			<p><b>Completion: </b></p>
 			<div class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuenow="<%=@user.completion%>" aria-valuemin="0" aria-valuemax="100" style="width:<%=@user.completion%>"><%=@user.completion%>
-		</div>
-	</div>
+        <div class="progress-bar" role="progressbar" aria-valuenow="<%=@user.completion%>" aria-valuemin="0" aria-valuemax="100" style="width:<%=@user.completion%>"><%=@user.completion%></div>
+      </div>
+      <a href="/user/<%= @user.id %>/destroy">Delete this profile</a>
+    </div>
+  </div>
 </div>
