@@ -1,0 +1,11 @@
+<% @users.each do |user| %>
+<div class = "container">
+  <div class = "row">
+    <div class = "col-md-12 col-md-offset-5">
+      <ul>
+      <li><a href = "/user/<%= user.id %>"><img src = "<%= user.image %>" atr ="" style="width:128px;height:128px;"> <%= user.name%></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<% end %>

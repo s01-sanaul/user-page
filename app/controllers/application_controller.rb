@@ -26,7 +26,7 @@ end
   end 
   
   def edit_user
-    u = User.new
+    u = User.find_by_id(params["id"])
     u.name=params["name"]
     u.join_date=params["date"]
     u.descrip=params["descrip"]
@@ -39,5 +39,16 @@ end
   def destroy
     u = User.find_by_id(params['id'])
     u.destroy 
+    redirect_to "/user/all"
+  end
+  
+  def index 
+    @users = User.all
+  end
+  
+  def error
+  end
+  
+  def replace 
   end
 end
